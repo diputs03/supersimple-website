@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Origami Gallery</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="gallery.css">
+    <script defer src="gallery.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Origami Gallery</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="discussions.html">Discussions</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="#" id="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Explore Beautiful Origami Creations</h2>
+        <div class="gallery">
+            <img src="images/origami1.jpg" alt="Origami Crane">
+            <img src="images/origami2.jpg" alt="Origami Flower">
+            <img src="images/origami3.jpg" alt="Origami Dragon">
+            <img src="images/origami4.jpg" alt="Origami Frog">
+        </div>
+    </main>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" src="" alt="Enlarged Image">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Origami Forum | All rights reserved.</p>
+    </footer>
+</body>
+</html>

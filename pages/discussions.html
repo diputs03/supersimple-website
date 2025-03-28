@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussions - Origami Forum</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="discussion.css">
+    <script type="module" src="../firebase.js"></script>
+    <script type="module" src="../discussions.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Origami Forum</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="discussions.html">Discussions</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#" id="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="discussion-form">
+            <h2>Start a Discussion</h2>
+            <form id="discussion-form">
+                <input type="text" id="discussion-title" placeholder="Discussion Title" required>
+                <textarea id="discussion-content" placeholder="What do you want to discuss?" required></textarea>
+                <button type="submit">Post Discussion</button>
+            </form>
+        </section>
+
+        <section class="discussion-list">
+            <h2>Latest Discussions</h2>
+            <div id="discussions-container">
+                <!-- Discussions will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Origami Forum | All rights reserved.</p>
+    </footer>
+</body>
+</html>

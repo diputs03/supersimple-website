@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Origami Forum</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="auth.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Origami Forum</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="pages/discussions.html">Discussions</a></li>
+                <li><a href="pages/tutorials.html">Tutorials</a></li>
+                <li><a href="pages/gallery.html">Gallery</a></li>
+                <li><a href="#" id="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="welcome">
+            <h2>Welcome to the Origami Forum</h2>
+            <p>Discuss folding techniques, share designs, and explore the art of paper folding.</p>
+        </section>
+        
+        <section class="forum-categories">
+            <div class="category">
+                <h3>Beginner Tips</h3>
+                <p>Start your origami journey here!</p>
+            </div>
+            <div class="category">
+                <h3>Advanced Techniques</h3>
+                <p>Discuss complex folds and modular origami.</p>
+            </div>
+            <div class="category">
+                <h3>Showcase & Challenges</h3>
+                <p>Post your latest creations and participate in challenges.</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Origami Forum | All rights reserved.</p>
+    </footer>
+
+    <!-- The Modal -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <h2>Login / Signup</h2>
+            <form id="login-form">
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? Sign up below:</p>
+            <form id="signup-form">
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <span class="close">&times;</span>
+        </div>
+    </div>
+    
+
+    
+</body>
+</html>

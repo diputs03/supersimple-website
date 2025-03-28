@@ -1,0 +1,51 @@
+.discussion-form {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.discussion-form h2 {
+    text-align: center;
+}
+
+.discussion-form input,
+.discussion-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.discussion-form button {
+    width: 100%;
+    padding: 10px;
+    background: #5a67d8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.discussion-list {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.discussion {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+.discussion h3 {
+    margin: 0;
+}
+
+.discussion p {
+    margin: 5px 0;
+}
