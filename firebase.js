@@ -1,14 +1,17 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
 import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js";
+require('dotenv').config();
+
+console.log(process.env)
 
 const firebaseConfig = {
-    apiKey: "AIzaSyA7MVgUF9PXsb9m-BQSVj3oa5Zenb05xOc",
-    authDomain: "login-test-e4d2a.firebaseapp.com",
-    projectId: "login-test-e4d2a",
-    storageBucket: "login-test-e4d2a.appspot.com",
-    messagingSenderId: "743352117975",
-    appId: "1:743352117975:web:4dc03a66b77278f14d1e92"
+    apiKey: process.env.FIRE_BASE_API_KEY,
+    authDomain: process.env.FIRE_BASE_PROJECT_ID+".firebaseapp.com",
+    projectId: process.env.FIRE_BASE_PROJECT_ID,
+    storageBucket: process.env.FIRE_BASE_PROJECT_ID+".appspot.com",
+    messagingSenderId: process.env.FIRE_BASE_MESSENGER_ID,
+    appId: process.env.FIRE_BASE_APP_ID
 };
 
 // Initialize Firebase
