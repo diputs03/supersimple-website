@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script type="module" src="../firebase.js"></script>
+    <script type="module" src="../auth.js"></script>
+    <script type="module" src="../profile.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Origami Forum</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="discussions.html">Discussions</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#" id="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="profile">
+            <img src="../images/default-avatar.png" alt="User Avatar" id="user-avatar">
+            <h2 id="username">Username</h2>
+            <p id="user-bio">This is your bio. Click to edit.</p>
+            <button id="edit-profile">Edit Profile</button>
+            <div id="edit-form" class="hidden">
+                <input type="text" id="new-username" placeholder="Enter new username">
+                <textarea id="new-bio" placeholder="Enter new bio"></textarea>
+                <button id="save-profile">Save</button>
+            </div>
+        </section>
+        
+        <section class="recent-activities">
+            <h3>Recent Activities</h3>
+            <ul id="activity-list">
+                <!-- Activities will be loaded dynamically -->
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Origami Forum | All rights reserved.</p>
+    </footer>
+
+    <script>
+        loadActivities();
+    </script>
+</body>
+</html>
