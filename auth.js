@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Open modal when clicking Login
     loginBtn.addEventListener("click", (event) => {
-        event.preventDefault(); // Prevent page from jumping to top
+        event.preventDefault();
         modal.style.display = "flex";
     });
 
@@ -52,4 +52,16 @@ document.addEventListener("DOMContentLoaded", () => {
             alert(error.message);
         }
     });
+
+    // Guesting Event
+    document.getElementsByTagName("guest").addEventListener("submit", async (event) => {
+        event.preventDefault();
+        try {
+            await guest();
+            alert("Guested successful!");
+            modal.style.display = "none"; // Close modal on successful guesting
+        } catch (error) {
+            alert(error.message);
+        }
+    })
 });

@@ -3,12 +3,12 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, si
 import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js";
 
 const firebaseConfig = {
-    apiKey: "your-api-key",
-    authDomain: "your-project-id.firebaseapp.com",
-    projectId: "your-project-id",
-    storageBucket: "your-project-id.appspot.com",
-    messagingSenderId: "your-messaging-sender-id",
-    appId: "your-app-id"
+    apiKey: "AIzaSyA7MVgUF9PXsb9m-BQSVj3oa5Zenb05xOc",
+    authDomain: "login-test-e4d2a.firebaseapp.com",
+    projectId: "login-test-e4d2a",
+    storageBucket: "login-test-e4d2a.appspot.com",
+    messagingSenderId: "743352117975",
+    appId: "1:743352117975:web:4dc03a66b77278f14d1e92"
 };
 
 // Initialize Firebase
@@ -71,7 +71,7 @@ onAuthStateChanged(auth, (user) => {
     } else {
         loginBtn.textContent = "Login";
         loginBtn.addEventListener("click", () => {
-            document.getElementById("auth-modal").style.display = "block";
+            document.getElementById("auth-modal").style.display = "flex";
         });
     }
 });
