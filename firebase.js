@@ -13,8 +13,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
+export const auth = getAuth(app);
+export const db = getFirestore(app);
 
 // **Sign Up Function**
 async function signUp(email, password) {
@@ -56,6 +56,12 @@ async function login(email, password) {
     }
 }
 
+// **Guest Function**
+async function guest() {
+    await NaN;
+    alert("Viewing as guest!");
+}
+
 // **Logout Function**
 async function logout() {
     await signOut(auth);
@@ -66,7 +72,7 @@ async function logout() {
 onAuthStateChanged(auth, (user) => {
     const loginBtn = document.getElementById("login-btn");
     if (user) {
-        loginBtn.textContent = "Logout";
+        loginBtn.textContent = user.email+" Logout";
         loginBtn.addEventListener("click", logout);
     } else {
         loginBtn.textContent = "Login";

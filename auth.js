@@ -29,13 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const email = document.getElementById("signup-email").value;
         const password = document.getElementById("signup-password").value;
 
-        try {
-            await signUp(email, password);
-            alert("Signup successful!");
-            modal.style.display = "none"; // Close modal on successful signup
-        } catch (error) {
-            alert(error.message);
-        }
+        await signUp(email, password);
+        modal.style.display = "none";
     });
 
     // Login Event
@@ -44,24 +39,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const email = document.getElementById("login-email").value;
         const password = document.getElementById("login-password").value;
 
-        try {
-            await login(email, password);
-            alert("Login successful!");
-            modal.style.display = "none"; // Close modal on successful login
-        } catch (error) {
-            alert(error.message);
-        }
+        await login(email, password);
+        modal.style.display = "none";
     });
 
     // Guesting Event
     document.getElementsByTagName("guest").addEventListener("submit", async (event) => {
         event.preventDefault();
-        try {
-            await guest();
-            alert("Guested successful!");
-            modal.style.display = "none"; // Close modal on successful guesting
-        } catch (error) {
-            alert(error.message);
-        }
+
+        await guest();
+        modal.style.display = "none";
     })
 });
