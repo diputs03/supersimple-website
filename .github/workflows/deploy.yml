@@ -1,0 +1,28 @@
+name: Deploy to Firebase
+
+on: [push]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Create .env file
+        run: |
+          echo "FIRE_BASE_API_KEY=${{ secrets.FIRE_BASE_API_KEY }}" >> .env
+          echo "FIRE_BASE_PROJECT_ID=${{ secrets.FIRE_BASE_PROJECT_ID }}" >> .env
+          echo "FIRE_BASE_MESSENGER_ID=${{ secrets.FIRE_BASE_MESSENGER_ID }}" >> .env
+          echo "FIRE_BASE_APP_ID=${{ secrets.FIRE_BASE_APP_ID }}" >> .env
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Deploy to Firebase
+        run: npm run deploy
